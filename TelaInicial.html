@@ -8,28 +8,45 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="TelaInicial.css">
     <script src="TelaInicial.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="menu-lateral">
-         <div class="botao-de-fechar">
-            <i class="material-icons">close</i>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+         <div class="close-btn">
+            <i class="fas fa-times"></i>
         </div>
         <h1>Tópicos</h1>
-
-
         <div class="menu">
-            <div class="item"><a href=""><i class="material-icons">chevron_right</i>RU</a></div>
-            <div class="item"><a href=""><i class="material-icons">chevron_right</i>Diretório Acadêmico</a></div>
-            <div class="item"><a href=""><i class="material-icons">chevron_right</i>Emissão de Documentos</a></div>
-            <div class="item"><a href=""><i class="material-icons">chevron_right</i>Matérias</a></div>
-            <div class="item"><a href=""><i class="material-icons">chevron_right</i>Trancamento Especial</a></div>
-
-            https://www.youtube.com/watch?v=sMm7c6FZ81Q&t=181s
+            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>RU</a></div>
+            <div class="item">
+              <a class="sub-btn"><i class="fas fa-angle-right"></i>Diretório Acadêmico<i class="fas fa-angle-right dropdown"></i></a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item">Sub Item 01</a>
+                <a href="#" class="sub-item">Sub Item 02</a>
+                <a href="#" class="sub-item">Sub Item 03</a>
+              </div>
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Emissão de Documentos</a></div>
+            <div class="item">
+              <a class="sub-btn"><i class="fas fa-angle-right"></i>Matérias<i class="fas fa-angle-right dropdown"></i></a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item">Sub Item 01</a>
+                <a href="#" class="sub-item">Sub Item 02</a>
+              </div>
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Trancamento especial</a></div>
         </div>
-
     </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Type here...">
+        <button class="search-button">Search</button>
+    </div>
+
 </body>
 
 </html>

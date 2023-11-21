@@ -13,8 +13,8 @@ body {
     background-position: center;
 
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .side-bar {
@@ -110,10 +110,11 @@ h1 {
 }
 
 .menu-btn {
-    position: absolute;
+    position: fixed;
     color: rgb(0, 0, 0);
     font-size: 35px;
-    margin: 25px;
+    left: 20px;
+    top: 20px;
     cursor: pointer;
 }
 
@@ -148,15 +149,15 @@ h1 {
 
 
 .search-container {
-    position: relative;
     margin-top: auto;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     border-radius: 20px;
     background: #5D676E;    
     margin-bottom: 10px;
     justify-content: center;
-    width: 300px;
+    width: 40%;
 }
 
 .search-input {

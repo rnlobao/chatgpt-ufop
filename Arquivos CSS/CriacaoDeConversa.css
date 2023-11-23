@@ -1,0 +1,50 @@
+.chat-area {
+    width: 50%;
+    height: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.user-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgb(208, 208, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-message-from-user {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-message-from-ia {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgb(16, 16, 16);
+    border-radius: 16px;
+}
+
+.text-message {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+}

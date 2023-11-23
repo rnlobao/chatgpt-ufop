@@ -1,39 +1,17 @@
-const subBtns = document.querySelectorAll('.sub-btn');
-const menuBtn = document.querySelector('.menu-btn');
-const sideBar = document.querySelector('.side-bar');
-const closeBtn = document.querySelector('.close-btn');
 const searchButton = document.querySelector(".search-button");
 const frequentQuestions = document.querySelector(".frequent-questions");
 const searchBar = document.querySelector(".search-input");
 const chatArea = document.querySelector(".chat-area");
-
-subBtns.forEach(function (subBtn) {
-    subBtn.addEventListener('click', function () {
-        var subMenu = this.nextElementSibling;
-        subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';
-
-        var dropdown = this.querySelector('.dropdown');
-        dropdown.classList.toggle('rotate');
-    });
-});
-
-menuBtn.addEventListener('click', function () {
-    sideBar.classList.add('active');
-    menuBtn.style.visibility = 'hidden';
-});
-
-closeBtn.addEventListener('click', function () {
-    sideBar.classList.remove('active');
-    menuBtn.style.visibility = 'visible';
-});
 
 searchButton.addEventListener("click", function () {
     frequentQuestions.style.display = "none";
     chatArea.style.height = "calc(100vh - 120px)";
     chatArea.style.marginBottom = "10px";
     chatArea.style.marginTop = "10px";
-    
+
+    console.log(searchBar.value);
     chatArea.appendChild(createUserChat(searchBar.value))
+
     searchBar.value = "";
 });
 
@@ -43,6 +21,10 @@ function createCircle() {
     div.style.height = "32px";
     div.style.borderRadius = "50%";
     div.style.backgroundColor = "rgb(208, 208, 208)";
+    div.style.display = "flex";
+    div.style.alignItems = "center";
+    div.style.justifyContent = "center";
+
 
     const icon = document.createElement("i");
     icon.className = "fas fa-user";
@@ -67,7 +49,7 @@ function createUserChat(messageFromUser) {
     message.style.lineHeight = "normal";
     message.textContent = messageFromUser;
 
-    div.appendChild(createCircle);
+    div.appendChild(userImage);
     div.appendChild(message)
     return div;
 }

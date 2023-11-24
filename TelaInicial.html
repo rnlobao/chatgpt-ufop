@@ -3,90 +3,93 @@
 <html>
 
 <head>
-    <title>Chat GPT da UFOP</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="./Arquivos CSS/AreaDeChat.css">
-    <link rel="stylesheet" href="./Arquivos CSS/CriacaoDeConversa.css">
-    <link rel="stylesheet" href="./Arquivos CSS/SideMenu.css">
-    <link rel="stylesheet" href="./Arquivos CSS/Loading.css">
+  <title>Chat GPT da UFOP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="./Arquivos CSS/AreaDeChat.css">
+  <link rel="stylesheet" href="./Arquivos CSS/CriacaoDeConversa.css">
+  <link rel="stylesheet" href="./Arquivos CSS/SideMenu.css">
+  <link rel="stylesheet" href="./Arquivos CSS/Loading.css">
 
-    <script src="./Arquivos JS/Loadings.js" defer></script>
-    <script src="./Arquivos JS/CriacaoDeConversas.js" defer></script>
-    <script src="./Arquivos JS/SideMenu.js" defer></script>
+  <script src="./Arquivos JS/Loadings.js" defer></script>
+  <script src="./Arquivos JS/CriacaoDeConversas.js" defer></script>
+  <script src="./Arquivos JS/SideMenu.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
+  <div class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="side-bar">
+    <div class="close-btn">
+      <i class="fas fa-times"></i>
     </div>
-    <div class="side-bar">
-         <div class="close-btn">
-            <i class="fas fa-times"></i>
-        </div>
-        <h1>Tópicos</h1>
-        <div class="menu">
-            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>RU</a></div>
-            <div class="item">
-              <a class="sub-btn"><i class="fas fa-angle-right"></i>Diretório Acadêmico<i class="fas fa-angle-right dropdown"></i></a>
-              <div class="sub-menu">
-                <a href="#" class="sub-item">Sub Item 01</a>
-                <a href="#" class="sub-item">Sub Item 02</a>
-                <a href="#" class="sub-item">Sub Item 03</a>
-              </div>
-            </div>
-            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Emissão de Documentos</a></div>
-            <div class="item">
-              <a class="sub-btn"><i class="fas fa-angle-right"></i>Matérias<i class="fas fa-angle-right dropdown"></i></a>
-              <div class="sub-menu">
-                <a href="#" class="sub-item">Sub Item 01</a>
-                <a href="#" class="sub-item">Sub Item 02</a>
-              </div>
-            </div>
-            <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Trancamento especial</a></div>
-        </div>
-    </div>
-
-    <div class="frequent-questions">
-      <h2>Perguntas frequentes:</h2>
-      <div class="three-frequent-questions">
-        <div class="first-frequent-question">
-          <img src="./Imagens/cifrao.svg" alt="cifrao">
-          <p>Como consultar meu saldo do ru?</p>
-        </div>
-        
-        <div class="first-frequent-question">
-          <img src="./Imagens/cadeado.svg" alt="cadedo">
-          <p>Como trancar minha matrícula?</p>
-        </div>
-        
-        <div class="first-frequent-question">
-          <img src="./Imagens/localizacao.svg" alt="localizacao">
-          <p>Onde fica a sala 20 do ICEB?</p>
+    <h1>Tópicos</h1>
+    <div class="menu">
+      <div class="item"><a href="#"><i class="fas fa-angle-right"></i>RU</a></div>
+      <div class="item">
+        <a class="sub-btn"><i class="fas fa-angle-right"></i>Diretório Acadêmico<i
+            class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+          <a href="#" class="sub-item">Sub Item 01</a>
+          <a href="#" class="sub-item">Sub Item 02</a>
+          <a href="#" class="sub-item">Sub Item 03</a>
         </div>
       </div>
+      <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Emissão de Documentos</a></div>
+      <div class="item">
+        <a class="sub-btn"><i class="fas fa-angle-right"></i>Matérias<i class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+          <a href="#" class="sub-item">Sub Item 01</a>
+          <a href="#" class="sub-item">Sub Item 02</a>
+        </div>
+      </div>
+      <div class="item"><a href="#"><i class="fas fa-angle-right"></i>Trancamento especial</a></div>
     </div>
+  </div>
 
-    <div class="chat-area">
-      
-    </div>
+  <div class="frequent-questions">
+    <h2>Perguntas frequentes:</h2>
+    <div class="three-frequent-questions">
+      <div class="first-frequent-question">
+        <img src="./Imagens/cifrao.svg" alt="cifrao">
+        <p>Como consultar meu saldo do ru?</p>
+      </div>
 
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Faça sua pergunta">
-        <button class="search-button">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-    </div>
+      <div class="first-frequent-question">
+        <img src="./Imagens/cadeado.svg" alt="cadedo">
+        <p>Como trancar minha matrícula?</p>
+      </div>
 
-    <div class="loading-container" id="loadingContainer">
-      <div class="dot-pulse-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+      <div class="first-frequent-question">
+        <img src="./Imagens/localizacao.svg" alt="localizacao">
+        <p>Onde fica a sala 20 do ICEB?</p>
       </div>
     </div>
+  </div>
+
+  <div class="chat-area">
+
+  </div>
+
+  <div class="search-container">
+    <div class="input-container">
+      <input type="text" class="search-input" placeholder="Faça sua pergunta">
+      <button class="search-button">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="loading-container" id="loadingContainer">
+    <div class="dot-pulse-container">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
 
 </body>
 

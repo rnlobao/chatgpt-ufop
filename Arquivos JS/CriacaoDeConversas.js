@@ -5,8 +5,8 @@ const chatArea = document.querySelector(".chat-area");
 
 searchButton.addEventListener("click", function () {
     frequentQuestions.style.display = "none";
-    chatArea.style.height = "calc(100vh - 120px)";
-    chatArea.style.marginBottom = "10px";
+    chatArea.style.height = "auto";
+    chatArea.style.marginBottom = "120px";
     chatArea.style.marginTop = "20px";
 
     chatArea.appendChild(createUserChat(searchBar.value));
@@ -40,7 +40,7 @@ function createUserChat(messageFromUser) {
     return div;
 }
 
-const resposta = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis.";
+const resposta = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis.";
 
 function createResponse() {
     const div = document.createElement("div");

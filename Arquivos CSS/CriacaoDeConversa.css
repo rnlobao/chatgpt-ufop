@@ -49,4 +49,6 @@
     line-height: normal;
     margin-left: 16px;
     text-align: left;
+    width: calc(100% - 48px);
+    word-wrap: break-word;
 }

@@ -9,7 +9,7 @@ function createChatElements() {
         chatArea.style.height = "auto";
         chatArea.style.marginBottom = "120px";
         chatArea.style.marginTop = "20px";
-      
+
         chatArea.appendChild(createUserChat(searchBar.value));
         chatArea.appendChild(createResponse());
         searchBar.value = "";
@@ -51,17 +51,28 @@ function createUserChat(messageFromUser) {
     return div;
 }
 
-const resposta = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus ante a tortor aliquam porta. Suspendisse dapibus, lorem non cursus tristique, ligula leo dictum sem, nec fermentum dolor arcu at mauris. Suspendisse potenti. Morbi ac ligula a erat mollis dignissim. Donec accumsan condimentum augue, sit amet dictum ligula aliquam a. Pellentesque orci tellus, hendrerit et ultrices eu, luctus sed ligula. Nullam nec massa odio. Phasellus viverra nisl velit, in semper erat fermentum ac. Nunc non sollicitudin ligula, eu efficitur felis.";
-
 function createResponse() {
     const div = document.createElement("div");
     div.className = "container-message-from-ia";
 
-    const message = document.createElement("p");
-    message.className = "text-message"
-    message.textContent = resposta;
-    message.style.margin = "40px";
+    const loadingElement = showLoading();
+    div.appendChild(loadingElement);
+    div.style.height = '40px';
+    div.style.justifyContent = 'center';
 
-    div.appendChild(message)
+    window.scrollTo(0, document.body.scrollHeight);
+    setTimeout(() => {
+        const message = document.createElement('p');
+        message.className = 'text-message';
+        message.textContent = exemploDeResposta[Math.floor(Math.random() * exemploDeResposta.length)];
+        message.style.margin = '40px';
+        div.style.height = 'auto';
+        div.style.justifyContent = 'left';
+
+        div.appendChild(message);
+
+        div.removeChild(loadingElement);
+        window.scrollTo(0, document.body.scrollHeight);
+    }, 2000);
     return div;
 }

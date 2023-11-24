@@ -39,12 +39,12 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 12px;
     padding-bottom: 13px;
-    font-family: sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: .1px;
+    margin-left: 16px;
 }
 
 .side-bar .menu {

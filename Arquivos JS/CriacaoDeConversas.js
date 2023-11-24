@@ -3,16 +3,27 @@ const frequentQuestions = document.querySelector(".frequent-questions");
 const searchBar = document.querySelector(".search-input");
 const chatArea = document.querySelector(".chat-area");
 
-searchButton.addEventListener("click", function () {
-    frequentQuestions.style.display = "none";
-    chatArea.style.height = "auto";
-    chatArea.style.marginBottom = "120px";
-    chatArea.style.marginTop = "20px";
+function createChatElements() {
+    if (searchBar.value !== '') {
+        frequentQuestions.style.display = "none";
+        chatArea.style.height = "auto";
+        chatArea.style.marginBottom = "120px";
+        chatArea.style.marginTop = "20px";
+      
+        chatArea.appendChild(createUserChat(searchBar.value));
+        chatArea.appendChild(createResponse());
+        searchBar.value = "";
+    }
+}
 
-    chatArea.appendChild(createUserChat(searchBar.value));
-    chatArea.appendChild(createResponse());
-    searchBar.value = "";
-});
+function createChatElementsWithKey(event) {
+    if (event.key == 'Enter' && searchBar.value !== '') {
+        createChatElements();
+    }
+}
+
+document.addEventListener('keyup', createChatElementsWithKey);
+searchButton.addEventListener("click", createChatElements);
 
 function createCircle() {
     const div = document.createElement("div");

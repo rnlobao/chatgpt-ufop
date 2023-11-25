@@ -13,6 +13,7 @@ function createChatElements(message) {
 
         chatArea.appendChild(createUserChat(message));
         chatArea.appendChild(createResponse());
+        window.scrollTo(0, document.body.scrollHeight);
         searchBar.value = "";
     }
 }
@@ -68,21 +69,30 @@ function createResponse() {
     div.style.justifyContent = 'center';
 
     possoPerguntar = false;
-
     window.scrollTo(0, document.body.scrollHeight);
+
     setTimeout(() => {
         const message = document.createElement('p');
         message.className = 'text-message';
-        message.textContent = exemploDeResposta[Math.floor(Math.random() * exemploDeResposta.length)];
-        message.style.margin = '40px';
+        const respostaAleatorio = exemploDeResposta[Math.floor(Math.random() * exemploDeResposta.length)];
+
+        if (respostaAleatorio === "Erro") {
+            message.textContent = "Ocorreu um erro inesperado, tente novamente mais tarde.";
+            div.style.border = "1px solid red"
+            div.style.backgroundColor = "rgb(69, 50, 65)"
+            message.style.margin = '30px';
+            message.style.textAlign = "center";
+        } else {
+            message.textContent = respostaAleatorio;
+            div.style.justifyContent = 'left';
+            message.style.margin = '40px';
+        }
+
         div.style.height = 'auto';
-        div.style.justifyContent = 'left';
-
         div.appendChild(message);
-
         div.removeChild(loadingElement);
         window.scrollTo(0, document.body.scrollHeight);
         possoPerguntar = true;
-    }, 4000);
+    }, 2000);
     return div;
 }

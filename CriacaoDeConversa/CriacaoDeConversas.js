@@ -2,9 +2,10 @@ const searchButton = document.querySelector(".search-button");
 const frequentQuestions = document.querySelector(".frequent-questions");
 const searchBar = document.querySelector(".search-input");
 const chatArea = document.querySelector(".chat-area");
+var possoPerguntar = true;
 
 function createChatElements(message) {
-    if (message !== '') {
+    if (message !== '' && possoPerguntar === true) {
         frequentQuestions.style.display = "none";
         chatArea.style.height = "auto";
         chatArea.style.marginBottom = "120px";
@@ -53,6 +54,10 @@ function createUserChat(messageFromUser) {
     return div;
 }
 
+function createServerBadResponse(div) {
+    div.style.border = ""
+}
+
 function createResponse() {
     const div = document.createElement("div");
     div.className = "container-message-from-ia";
@@ -61,6 +66,8 @@ function createResponse() {
     div.appendChild(loadingElement);
     div.style.height = '40px';
     div.style.justifyContent = 'center';
+
+    possoPerguntar = false;
 
     window.scrollTo(0, document.body.scrollHeight);
     setTimeout(() => {
@@ -75,6 +82,7 @@ function createResponse() {
 
         div.removeChild(loadingElement);
         window.scrollTo(0, document.body.scrollHeight);
-    }, 2000);
+        possoPerguntar = true;
+    }, 4000);
     return div;
 }

@@ -2,6 +2,7 @@ const subBtns = document.querySelectorAll('.sub-btn');
 const menuBtn = document.querySelector('.menu-btn');
 const sideBar = document.querySelector('.side-bar');
 const closeBtn = document.querySelector('.close-btn');
+const subItems = document.querySelectorAll('.sub-item');
 
 subBtns.forEach(function (subBtn) {
     subBtn.addEventListener('click', function () {
@@ -21,5 +22,14 @@ menuBtn.addEventListener('click', function () {
 closeBtn.addEventListener('click', function () {
     sideBar.classList.remove('active');
     menuBtn.style.visibility = 'visible';
+});
+
+subItems.forEach((subItem) => {
+    subItem.addEventListener('click', (event) => {
+        window.scrollTo(0, document.body.scrollHeight);
+        var textoDaDiv = subItem.textContent;
+        createChatElements(textoDaDiv);
+        window.scrollTo(0, document.body.scrollHeight);
+    });
 });
 

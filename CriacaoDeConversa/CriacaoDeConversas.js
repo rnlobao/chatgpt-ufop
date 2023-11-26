@@ -93,6 +93,6 @@ function createResponse() {
         div.removeChild(loadingElement);
         window.scrollTo(0, document.body.scrollHeight);
         possoPerguntar = true;
-    }, 2000);
+    }, 1000);
     return div;
 }

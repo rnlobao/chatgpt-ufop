@@ -19,8 +19,6 @@ body {
 
 .side-bar {
     background: #5D676E;
-    /* background-color: black;
-    background-color: rgb(16, 16, 16); */
     backdrop-filter: blur(15px);
     width: 250px;
     height: 100vh;

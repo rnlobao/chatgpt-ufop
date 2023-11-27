@@ -19,6 +19,8 @@ body {
 
 .side-bar {
     background: #5D676E;
+    /* background-color: black;
+    background-color: rgb(16, 16, 16); */
     backdrop-filter: blur(15px);
     width: 250px;
     height: 100vh;
@@ -38,63 +40,10 @@ body {
     left: 0;
 }
 
-.side-bar .menu {
-    margin-top: 30px;
-    background: rgba(0, 0, 0, 0.20);
-    margin: 0 16px;
-    border-radius: 20px;
-}
-
-.side-bar .menu .item {
-    position: relative;
-    cursor: pointer;
-}
-
-.side-bar .menu .item a {
-    text-decoration: none;
-    display: block;
-    padding: 5px 30px;
-    line-height: 60px;
-    color: #FFF;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.side-bar .menu .item a:hover {
-    background: #33363a;
-    transition: 0.3s ease;
-    border-radius: 20px;
-}
-
-.side-bar .menu .item i {
-    margin-right: 15px;
-}
-
-.side-bar .menu .item a .dropdown {
-    position: absolute;
-    right: 0;
-    margin: 20px;
-    transition: 0.3s ease;
-}
-
-.side-bar .menu .item .sub-menu {
-    display: none;
-}
-
-.side-bar .menu .item .sub-menu a {
-    padding-left: 80px;
-}
-
-.rotate {
-    transform: rotate(90deg);
-}
-
 .close-btn {
     position: absolute;
     color: #fff;
-
-    font-size: 23px;
+    font-size: 16px;
     right: 0px;
     margin: 15px;
     cursor: pointer;
@@ -107,38 +56,41 @@ body {
     left: 20px;
     top: 20px;
     cursor: pointer;
-}
-
-.menu-btn i {
     font-size: 24px;
 }
 
-.main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-.main h1 {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 60px;
-    text-align: center;
-    line-height: 80px;
-}
-
 .side-bar h1 {
-    margin: 14px 12px;
-    font-size: .75rem;
+    margin-left: 12px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
 }
 
-@media (max-width: 900px) {
-    .main h1 {
-        font-size: 40px;
-        line-height: 60px;
-    }
+.inside-sidebar {
+    margin: 12px;
 }
 
+.inside-sidebar a {
+    display: block; 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: normal;
+    text-decoration: none;
+    background-color: #9B1833;
+    cursor: pointer;
+    margin: 6px 0;
+    padding: 4px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.side-bar h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1rem;
+    margin-top: 32px;
+}

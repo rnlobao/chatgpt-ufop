@@ -26,10 +26,8 @@ closeBtn.addEventListener('click', function () {
 
 subItems.forEach((subItem) => {
     subItem.addEventListener('click', (event) => {
-        window.scrollTo(0, document.body.scrollHeight);
         var textoDaDiv = subItem.textContent;
         createChatElements(textoDaDiv);
-        window.scrollTo(0, document.body.scrollHeight);
     });
 });
 

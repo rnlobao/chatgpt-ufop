@@ -15,6 +15,7 @@ closeBtn.addEventListener('click', function () {
 
 subItems.forEach((subItem) => {
     subItem.addEventListener('click', (event) => {
+        event.preventDefault();
         var textoDaDiv = subItem.textContent;
         createChatElements(textoDaDiv);
     });

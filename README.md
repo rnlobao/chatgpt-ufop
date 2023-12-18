@@ -9,7 +9,7 @@
 
 ==== Geral ====
 - [ ] Arrumar para ficar bom para smartphone
-- [ ] Fazer camada de integração com API
+- [x] Fazer camada de integração com API
 - [ ] Integrar com o backend
 
 

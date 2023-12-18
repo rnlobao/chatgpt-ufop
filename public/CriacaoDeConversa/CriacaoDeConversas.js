@@ -21,13 +21,14 @@ async function createChatElements(message) {
         div.style.justifyContent = 'center';
 
         const loadingElement = showLoading();
-        div.appendChild(loadingElement);
+        div.appendChild(loadingElement)
+        chatArea.appendChild(div);
 
         try {
             const resposta = await createResponse();
             chatArea.appendChild(resposta);
             window.scrollTo(0, document.body.scrollHeight);
-            div.removeChild(loadingElement);
+            chatArea.removeChild(div);
         } catch (error) {
             console.error('Erro ao criar resposta:', error);
         }

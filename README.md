@@ -5,7 +5,7 @@
 
 ==== Side menu ====
 - [ ] Fazer o sidemenu nao passar por cima da view
-- [ ] Bug de clicar no sidemenu ele sobe
+- [x] Bug de clicar no sidemenu ele sobe
 
 ==== Geral ====
 - [ ] Arrumar para ficar bom para smartphone

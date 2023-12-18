@@ -10,7 +10,7 @@
 ==== Geral ====
 - [ ] Arrumar para ficar bom para smartphone
 - [x] Fazer camada de integração com API
-- [ ] Integrar com o backend
+- [x] Integrar com o backend
 
 
 Para rodar acesse com o server rodando:

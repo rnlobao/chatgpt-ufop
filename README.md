@@ -11,3 +11,7 @@
 - [ ] Arrumar para ficar bom para smartphone
 - [ ] Fazer camada de integração com API
 - [ ] Integrar com o backend
+
+
+Para rodar acesse com o server rodando:
+http://localhost:2200/TelaInicial.html

@@ -25,7 +25,6 @@ function generateResponse(req, resp) {
             textResponse: randomResponse,
         };
 
-        console.log(response);
         resp.json(response);
     }, 4000);
 }

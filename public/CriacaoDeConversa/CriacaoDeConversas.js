@@ -25,7 +25,7 @@ async function createChatElements(message) {
         chatArea.appendChild(div);
 
         try {
-            const resposta = await createResponse();
+            const resposta = await createResponse(message);
             chatArea.appendChild(resposta);
             window.scrollTo(0, document.body.scrollHeight);
             chatArea.removeChild(div);
@@ -75,7 +75,7 @@ function createUserChat(messageFromUser) {
     return div;
 }
 
-async function createResponse() {
+async function createResponse(userQuestion) {
     const div = document.createElement("div");
     div.className = "container-message-from-ia";
 
@@ -91,7 +91,7 @@ async function createResponse() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ word: searchBar.value }),
+            body: JSON.stringify({ word: userQuestion }),
         });
 
         const text = await result.json();

@@ -6,16 +6,21 @@ const promptArea = document.querySelector('#prompt-area');
 const promptInitialHeight = promptArea.clientHeight;
 let possoPerguntar = true;
 
+searchBar.addEventListener("keypress", event => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+    }
+});
+
 async function createChatElements(message) {
-    if (message && possoPerguntar === true) {
-        promptArea.style.height = promptInitialHeight;
+    if (message !== '' && possoPerguntar === true) {
+        promptArea.style.height = promptInitialHeight + "px";
         frequentQuestions.style.display = "none";
         chatArea.style.height = "auto";
         chatArea.style.marginBottom = "120px";
         chatArea.style.marginTop = "20px";
 
         chatArea.appendChild(createUserChat(message));
-        console.log(searchBar.value);
         searchBar.value = "";
 
         const div = document.createElement("div");

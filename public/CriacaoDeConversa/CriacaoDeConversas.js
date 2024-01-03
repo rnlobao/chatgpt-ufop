@@ -2,16 +2,20 @@ const searchButton = document.querySelector(".search-button");
 const frequentQuestions = document.querySelector(".frequent-questions");
 const searchBar = document.querySelector(".search-input");
 const chatArea = document.querySelector(".chat-area");
-var possoPerguntar = true;
+const promptArea = document.querySelector('#prompt-area');
+const promptInitialHeight = promptArea.clientHeight;
+let possoPerguntar = true;
 
 async function createChatElements(message) {
-    if (message !== '' && possoPerguntar === true) {
+    if (message && possoPerguntar === true) {
+        promptArea.style.height = promptInitialHeight;
         frequentQuestions.style.display = "none";
         chatArea.style.height = "auto";
         chatArea.style.marginBottom = "120px";
         chatArea.style.marginTop = "20px";
 
         chatArea.appendChild(createUserChat(message));
+        console.log(searchBar.value);
         searchBar.value = "";
 
         const div = document.createElement("div");

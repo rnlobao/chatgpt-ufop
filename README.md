@@ -1,7 +1,7 @@
 # Possivel checklist
 
 ==== Chat ====
-- [ ] fazer o input ser do tamanho da mensagem do usuario
+- [x] fazer o input ser do tamanho da mensagem do usuario
 
 ==== Side menu ====
 - [ ] Fazer o sidemenu nao passar por cima da view
@@ -10,7 +10,7 @@
 
 
 ==== Geral ====
-- [ ] Arrumar para ficar bom para smartphone
+- [x] Arrumar para ficar bom para smartphone
 - [x] Fazer camada de integração com API
 - [x] Integrar com o backend
 

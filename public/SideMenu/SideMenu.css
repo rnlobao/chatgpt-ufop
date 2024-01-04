@@ -92,3 +92,9 @@ body {
     line-height: 1rem;
     margin-top: 32px;
 }
+
+@media screen and (max-width: 480px) {
+    .side-bar {
+        z-index: 9999;
+    }
+}

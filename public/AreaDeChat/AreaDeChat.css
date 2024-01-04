@@ -19,7 +19,7 @@
     min-height: 75px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .search-input {
@@ -98,4 +98,29 @@
 .first-frequent-question p {
     margin: 16px;
     text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .frequent-questions {
+      width: 80%;
+      margin-top: 20%;
+    }
+
+    .first-frequent-question img {
+        display: none;
+    }
+
+    .three-frequent-questions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-container {
+        width: 90%;
+    }
+
+    .search-input {
+        width: 80%;
+        font-size: 12px;
+    }
 }

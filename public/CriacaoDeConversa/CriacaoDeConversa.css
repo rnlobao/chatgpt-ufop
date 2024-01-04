@@ -52,3 +52,10 @@
     width: calc(100% - 48px);
     word-wrap: break-word;
 }
+
+@media screen and (max-width: 480px) {
+    .chat-area {
+      width: 80%;
+      margin-left: 5%;
+    }
+}

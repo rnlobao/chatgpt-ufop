@@ -18,6 +18,11 @@ subItems.forEach((subItem) => {
         event.preventDefault();
         var textoDaDiv = subItem.textContent;
         createChatElements(textoDaDiv);
+
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            sideBar.classList.remove('active');
+            menuBtn.style.visibility = 'visible';
+        }
     });
 });
 

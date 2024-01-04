@@ -1,6 +1,7 @@
 const searchButton = document.querySelector(".search-button");
 const frequentQuestions = document.querySelector(".frequent-questions");
 const searchBar = document.querySelector(".search-input");
+const searchContainer = document.querySelector(".search-container");
 const chatArea = document.querySelector(".chat-area");
 const promptArea = document.querySelector('#prompt-area');
 const promptInitialHeight = promptArea.clientHeight;
@@ -15,9 +16,17 @@ searchBar.addEventListener("keypress", event => {
 async function createChatElements(message) {
     if (message !== '' && possoPerguntar === true) {
         promptArea.style.height = promptInitialHeight + "px";
-        frequentQuestions.style.display = "none";
+
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            let heightDoInputComMargin = searchContainer.clientHeight + 15;
+            let heightPrevista = heightDoInputComMargin + "px";
+            chatArea.style.marginBottom = heightPrevista;
+        } else {
+            chatArea.style.marginBottom = "120px";
+        }
+
         chatArea.style.height = "auto";
-        chatArea.style.marginBottom = "120px";
+        frequentQuestions.style.display = "none";
         chatArea.style.marginTop = "20px";
 
         chatArea.appendChild(createUserChat(message));

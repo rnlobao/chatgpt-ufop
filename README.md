@@ -16,4 +16,5 @@
 
 
 Para rodar acesse com o server rodando:
+node server.js
 http://localhost:2200/TelaInicial.html

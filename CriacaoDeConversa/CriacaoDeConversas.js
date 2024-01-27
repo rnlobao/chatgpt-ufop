@@ -39,17 +39,12 @@ async function createChatElements(message) {
         div.style.justifyContent = 'center';
 
         const loadingElement = showLoading();
-        div.appendChild(loadingElement)
+        div.appendChild(loadingElement);
         chatArea.appendChild(div);
 
-        try {
-            const resposta = await createResponse(message);
-            chatArea.appendChild(resposta);
-            window.scrollTo(0, document.body.scrollHeight);
-            chatArea.removeChild(div);
-        } catch (error) {
-            console.error('Erro ao criar resposta:', error);
-        }
+        chatArea.appendChild(createResponse(message));
+        window.scrollTo(0, document.body.scrollHeight);
+        chatArea.removeChild(div);
     }
 }
 
@@ -93,7 +88,7 @@ function createUserChat(messageFromUser) {
     return div;
 }
 
-async function createResponse(userQuestion) {
+function createResponse(userQuestion) {
     const div = document.createElement("div");
     div.className = "container-message-from-ia";
 
@@ -110,7 +105,6 @@ async function createResponse(userQuestion) {
 
         div.appendChild(message);
 
-        div.removeChild(loadingElement);
         window.scrollTo(0, document.body.scrollHeight);
     }, 2000);
 

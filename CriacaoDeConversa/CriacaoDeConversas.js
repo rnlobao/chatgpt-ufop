@@ -100,30 +100,19 @@ async function createResponse(userQuestion) {
     possoPerguntar = false;
     window.scrollTo(0, document.body.scrollHeight);
 
-    const message = document.createElement('p');
-    message.className = 'text-message';
-
-    try {
-        const result = await fetch('http://localhost:2200/response', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ word: userQuestion }),
-        });
-
-        const text = await result.json();
-        message.textContent = text.textResponse;
-        div.style.justifyContent = 'left';
+    setTimeout(() => {
+        const message = document.createElement('p');
+        message.className = 'text-message';
+        message.textContent = exemploDeResposta[Math.floor(Math.random() * exemploDeResposta.length)];
         message.style.margin = '40px';
-    } catch (error) {
-        message.textContent = "Ocorreu um erro inesperado, tente novamente mais tarde.";
-        div.style.border = "1px solid red"
-        div.style.backgroundColor = "rgb(69, 50, 65)"
-        message.style.margin = '30px';
-        message.style.textAlign = "center";
-    } finally {
-    }
+        div.style.height = 'auto';
+        div.style.justifyContent = 'left';
+
+        div.appendChild(message);
+
+        div.removeChild(loadingElement);
+        window.scrollTo(0, document.body.scrollHeight);
+    }, 2000);
 
     div.style.height = 'auto';
     div.appendChild(message);
